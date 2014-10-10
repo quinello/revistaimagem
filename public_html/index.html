@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title>Revista Imagem</title>
+
+        <!--         For improved cross-browser rendering-->
+        <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- Custom styles for this template -->
+        <link href="css/my-css.css" rel="stylesheet"/>
+
+
+    </head>
+
+    <body ng-app="">
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Editora Sylos</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container" ng-init="ag_imagem_logo = 1">
+            <!-- Main component for a primary marketing message or call to action -->
+            <div class="jumbotron">
+                <header class="site-header centered">
+
+                    <div class="custom-logo">
+                        <img  data-src="js/holder.js/283x150" alt="283%x150" src="images/logo{{ag_imagem_logo}}.png"/>
+                    </div>
+
+                    <nav class="site-navigation" role="navigation">
+                        <ul class="nav-custom">                            
+                            <li><a ng-mouseover="ag_imagem_logo = 1" href="#" >Revista Imagem</a></li>
+                            <li><a ng-mouseover="ag_imagem_logo = 2" href="#" >Construção</a></li>
+                            <li><a ng-mouseover="ag_imagem_logo = 3"href="#" >Gastronomia</a></li>
+                            <li><a ng-mouseover="ag_imagem_logo = 4"href="#" >Moda</a></li>
+                        </ul>
+                    </nav>
+
+                </header>
+                <div>
+<!--                    <p>
+                        Depois do sucesso de Imagem Construção, publicação que chegou à praça no primeiro semestre deste ano, a Editora Sylos lança o primeiro Guia Gastronômico completo de São José do Rio Pardo – Imagem Gastronomia – comemorando a atividade crescente da culinária de nossa cidade, que cada vez mais e melhor atende a clientela com produtos novos ou os antigos sempre com melhor elaboração.
+                        Não é apenas o número de estabelecimentos – cerca de 150 – que conta para se qualificar a culinária de nossa cidade, mas a qualidade crescente dos serviços por eles prestados e sua diversidade, que vão desde os bares mais simples, mas bem aconchegantes, que reúnem nos fins de tarde os amigos de sempre – a “confraria” – até os restaurantes tradicionais e os especializados.
+                        Há que se ter em conta o grande número de tradicionais eventos gastronômicos que se multiplicam na cidade e no campo, sempre com comidas típicas de nossa cidade. Essa tradição já rendeu a São José a glória de termos um chef rio-pardense fazendo sucesso no país – o Jefferson Rueda. Temos também Marco Aielo, professor (italiano-rio-pardense) de culinária italiana em toda a região. E especialistas em porco paraguaio bem sucedidos também na região, como o Jaime Carteiro. São exemplos de que estamos no caminho da profissionalização, fator fundamental para continuidade do setor crescimento e conquista de solidez nos negócios.
+                        Não nos esqueçamos dos fornecedores de espaços, serviços e equipamentos, dos bufês, dos que produzem salgados, doces e bolos para festas. Enfim, não há espaço suficiente aqui para citação de tudo o que já temos. Mas, na listagem da gastronomia rio-pardense nossos leitores vão encontrar tudo o querem.
+                        Imagem Gastronomia tem certeza de que presta um serviço tão importante para a clientela quanto para o próprio setor gastronômico local, dando-lhe condição de ver uma auto-imagem que já lhe permite representar São José como ponto de referência turística importante na culinária regional.
+                        A Editora
+                    </p>-->
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+<!--                            <img src="images/Jefferson_rueda.jpg" style="height: 200px; width: 100%; display: block;" data-src="js/holder.js/100%x200" alt="100%x200">-->
+                            <img src="images/Jefferson_rueda.jpg" data-src="js/holder.js/242x200" alt="242%x200">
+                            <div class="caption">
+                                <h3>Jeffinho: uma culinária rio-pardense ganha o país</h3>
+                                <p>A imprensa paulistana abriu grandes espaços para a culinária autoral do rio-pardense Jefferson Rueda (34 anos). Ele foi eleito o “Chef do Ano” pelo “Comer & Beber”, da revista Veja...</p>
+                                <p><a href="#" class="btn" role="button">Continue lendo...</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+                            <div class="caption">
+                                <h3>"O vinho sem frescuras"</h3>
+                                <p>“Estou cansado de tanta frescura quando o tema é vinho”, afirma o enólogo argentino-brasileiro Adolfo Alberto Lona, na abertura de seu blog “Vinho Sem Frescuras”. Lona, enólogo argentino...</p>
+                                <p><a href="#" class="btn" role="button">Continue lendo...</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+                            <div class="caption">
+                                <h3>Porco paraguaio, o mais rio-pardense dos estrangeiros</h3>
+                                <p>Embora se saiba que o “porco paraguaio” é uma iguaria hoje “universal”, dá para dizer que já pode ser considerado como item da culinária rio-pardense, por adoção, tamanha sua “incidência” nos nossos...</p>
+                                <p><a href="#" class="btn" role="button">Continue lendo...</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /container -->
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Angular -->
+        <script src="js/angular.min.js"></script>
+        
+        <!--Holder renders image placeholders entirely in browser. -->
+        <script src="js/holder.js"></script>
+    </body>
+</html>
+
