@@ -10,12 +10,20 @@ body {
 .jumbotron {
     background-color: #fff;
     height: 3000px;
+    width: 1000px;
 }
 .menu-wrapper {
     position: relative;
     width: 100%;
 }
 
+.entry-content {
+    word-wrap: break-word;
+}
+
+.foo-chumbo {
+    outline: 1px solid #333;
+}
 /*---------------------------------------------------------
  Custom logo (_scaffolding.scss)
 -------------------------------------------------------- */
@@ -78,8 +86,8 @@ body {
     text-transform: uppercase;
     font-size: 15px;
     font-size: 1.5rem;
-    margin: 10px 0px;
-    margin: 1rem 0px;
+    margin: 20px 0px;
+    margin: 3rem 0px;
     position: relative;
     z-index: 100;
     font-family: 'Montserrat', cursive;
