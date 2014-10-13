@@ -157,12 +157,14 @@ Fonts
     margin: 0px; 
     padding: 0px; 
     width: 300px;
+
 }
 .libs li {
     background: #d7e3f0; 
     padding: 10px;  
     margin-bottom: 3px; 
     cursor: pointer;
+    display: inline-block;
 }
 .libs li.marked {
     background: #b4dfa6;
