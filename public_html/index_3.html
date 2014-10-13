@@ -85,12 +85,21 @@
                     </div>
 
                     <p class="lead text-center">Revista Imagem veio falar sobre a revista como um todo para que veio e os seguintes bla bal bal bal bal bal bal bal bal kdkd dkdkdkdkd dkd dkdk dk dkdkdk sdlkfslk fsdkljflks flkjf sldkfj sdlkfj lksdjf slkdjflk sdflkj sdflkj sdkkd lsdkjf.</p>
-                        <ul class="libs">
+                    
+       
+                    <ul class="libs">
                             <li ng-repeat="lib in libs" ng-class="{marked: lib.checked}" ng-click="markIt(lib)"  ng-switch on ="lib.checked">
-                                <span ng-bind="lib.name"></span> 
+                                <span ng-bind="lib.name"></span>
                                 <span class="glyphicon glyphicon-ok" ng-switch-when="true"></span>
                             </li>
+                    </ul>
+                    
+                    <nav class="site-navigation" role="navigation">
+                        <ul class="nav-custom">  
+                            <li ng-repeat="lib in libs" ng-class="{marked: lib.checked}" ng-click="markIt(lib)"  ng-switch on ="lib.checked"><a href="#">{{lib.name}}<span class="glyphicon glyphicon-ok" ng-switch-when="true"></span></a></li>
                         </ul>
+                    </nav>
+         
                 </header>
 
                 <div class="panel panel-default" >
