@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="showHideDemo">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title>Revista Imagem</title>
+
+        <!--         For improved cross-browser rendering-->
+        <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- Custom styles for this template -->
+        <link href="css/my-css.css" rel="stylesheet"/>
+
+
+    </head>
+
+    <body>
+
+        <!--         Fixed navbar 
+                <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">Editora Sylos</a>
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Inicio</a></li>
+                                <li><a href="#about">Sobre</a></li>
+                                <li><a href="#contact">Contato</a></li>
+                            </ul>
+                        </div>/.nav-collapse 
+                        <form class="navbar-form navbar-right" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                </div>-->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Editora Sylos</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Inicio</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>              
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Procurar...">
+                        </div>
+                        <button type="submit" class="btn btn-default">buscar</button>
+                    </form>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="container" ng-controller="showHideController">
+            <!-- Main component for a primary marketing message or call to action -->
+
+            <div class="jumbotron">
+                <header class="site-header centered">
+
+                    <div class="custom-logo">
+                        <img  data-src="js/holder.js/283x150" alt="283%x150" src="images/logo1.png"/>
+                    </div>
+
+                    <p class="lead text-center">Revista Imagem veio falar sobre a revista como um todo para que veio e os seguintes bla bal bal bal bal bal bal bal bal kdkd dkdkdkdkd dkd dkdk dk dkdkdk sdlkfslk fsdkljflks flkjf sldkfj sdlkfj lksdjf slkdjflk sdflkj sdflkj sdkkd lsdkjf.</p>
+
+
+
+                </header>
+
+                <div class="panel panel-default" >
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Reportagens</h3>
+                        <div class="well" >
+                            <h5>Selecione os segmentos que você quer ver</h5>       
+                            <nav class="libs" role="navigation">
+                                <ul>  
+                                    <li ng-repeat="lib in libs" ng-class="{marked: lib.checked}" ng-click="markIt(lib)"  ng-switch on ="lib.checked">
+                                        <span>{{lib.name}}<span class="glyphicon glyphicon-ok" ng-switch-when="true"></span></span>
+                                    </li>
+                                </ul>
+                            </nav>                            
+                        </div>
+
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4" ng-if="SegmentoMarkIt('Gastronomia')">                        
+                                <div class ="thumbnail">        
+                                    <img src="images/Jefferson_rueda.jpg" data-src="js/holder.js/242x200" alt="242%x200">
+                                    <div class="caption">
+                                        <h3 class="text-center">Jeffinho: uma culinária rio-pardense ganha o país</h3>
+                                        <p class="text-justify">A imprensa paulistana abriu grandes espaços para a culinária autoral do rio-pardense Jefferson Rueda (34 anos). Ele foi eleito o “Chef do Ano” pelo “Comer & Beber”, da revista Veja...</p>
+                                        <p><a href="#" class="btn" role="button">Continue lendo...</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4" ng-if="SegmentoMarkIt('Construção')">
+                                <div class="thumbnail">
+                                    <img src="images/reportagens/vinho.jpg" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+                                    <div class="caption">
+                                        <h3 class="text-center">"O vinho sem frescuras"</h3>
+                                        <p class="text-justify">“Estou cansado de tanta frescura quando o tema é vinho”, afirma o enólogo argentino-brasileiro Adolfo Alberto Lona, na abertura de seu blog “Vinho Sem Frescuras”. Lona, enólogo argentino...</p>
+                                        <p><a href="#" class="btn" role="button">Continue lendo...</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4"  ng-if="SegmentoMarkIt('Moda')">
+                                <div class="thumbnail">
+                                    <img src="images/reportagens/porco.jpg" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+                                    <div class="caption">
+                                        <h3 class="text-center">Porco paraguaio, o mais rio-pardense dos estrangeiros</h3>
+                                        <p class="text-justify">Embora se saiba que o “porco paraguaio” é uma iguaria hoje “universal”, dá para dizer que já pode ser considerado como item da culinária rio-pardense, por adoção, tamanha sua “incidência” nos nossos...</p>
+                                        <p><a href="#" class="btn" role="button">Continue lendo...</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">Panel footer</div>
+                </div>
+            </div> <!-- /container -->
+
+
+            <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+            <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+
+            <script src="js/bootstrap.min.js"></script>
+
+            <!-- Angular -->
+            <script src="js/angular.min.js"></script>
+
+            <!--Holder renders image placeholders entirely in browser. -->
+            <script src="js/holder.js"></script>
+
+
+            <script src="js/mod_showhidedemo.js" type="text/javascript"></script>
+    </body>
+</html>
+

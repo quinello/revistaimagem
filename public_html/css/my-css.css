@@ -74,7 +74,7 @@ body {
 
 .nav-custom>li{
     position:relative;
-    display:block
+    display:block;
 }
 
 .nav-custom>li>a{
@@ -88,7 +88,6 @@ body {
     font-size: 1.5rem;
     margin: 20px 0px;
     margin: 3rem 0px;
-    position: relative;
     z-index: 100;
     font-family: 'Montserrat', cursive;
     border-radius:4px;
@@ -127,7 +126,6 @@ body {
     max-width:none
 }
 
-
 /*---------------------------------------------------------
 Fonts
 -------------------------------------------------------- */
@@ -147,31 +145,12 @@ Fonts
 /*---------------------------------------------------------
  Menu de selecao de segmento via angular
 -------------------------------------------------------- */
-.chooseLib {
-    border-bottom: 1px solid #000; 
-    padding-bottom: 10px; 
-    margin-bottom: 20px; 
-}
-.libs {
-    list-style-type: none; 
-    margin: 0px; 
-    padding: 0px; 
-    width: 300px;
-}
-.libs li {
-    background: #d7e3f0; 
-    padding: 10px;  
-    margin-bottom: 3px; 
-    cursor: pointer;
-    display: inline-block; 
-}
-.libs li.marked {
-    background: #b4dfa6;
-}
-.libs li span.glyphicon{
-    margin-right: 10px; 
-    float: right;
-}
+.chooseLib{border-bottom: 1px solid #000; padding-bottom: 10px; margin-bottom: 20px;}
+.libs {list-style-type: none; margin: 0px; padding: 0px; width: 300px;}
+.libs li {background: #B4DFA6; padding: 10px;  margin-bottom: 3px;}
+.libs li span{margin-right: 10px;}
+.libs-input[type="checkbox"] {margin-right: 5px;}
+.libs-label {margin-right: 70px;}
 
 /*---------------------------------------------------------
  Navigation (_scaffolding.scss)
