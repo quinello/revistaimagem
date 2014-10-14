@@ -88,25 +88,26 @@
                     <p class="lead text-center">Revista Imagem veio falar sobre a revista como um todo para que veio e os seguintes bla bal bal bal bal bal bal bal bal kdkd dkdkdkdkd dkd dkdk dk dkdkdk sdlkfslk fsdkljflks flkjf sldkfj sdlkfj lksdjf slkdjflk sdflkj sdflkj sdkkd lsdkjf.</p>
 
                     <div class='container2'>
-                        <div class='card'>
+                        <div class='card' ng-class="{flipped: hover}" 
+                             ng-mouseleave ="hover = true"
+                             ng-class="{flipped: hover}" 
+                             ng-mouseenter="hover = true">
+                            <img class="hidden" data-src="holder.js/312x375" src="images/correndo_312x375.png" alt="Second slide image">
 
-                            <section class='signup' >
-                                <div ng-class="{flipped: hover}" 
-                                     ng-mouseleave ="hover = true">
-
-                                        <h2>back</h2>
-
+                            <section class='post-back'>
+                                <div class="post-title">                                  
+                                    <p>backbackbackbackbackbackback</p>
                                 </div>
                             </section>
 
-                            <section class='signin' >
-                                <div ng-class="{flipped: hover}" 
-                                     ng-mouseenter="hover = true">               
-                                    <img class="tinted" data-src="holder.js/312x375" src="images/correndo_312x375.png" alt="Second slide image">
-                                    <div class="carousel-caption">
-                                        <h3>Revista Imagem Gastronomia</h3>
-                                        <p>O primeiro Guia Gastronômico completo de São José do Rio Pardo.</p>
+                            <section class="post-front" >
+                                <div>
+                                    <div class="thumbnail">
+                                        <img data-src="holder.js/312x375" src="images/correndo_312x375.png" alt="Second slide image">
                                     </div>
+                                    <div class="post-title">
+                                        <h3>Revista Imagem Gastronomia</h3>
+                                    </div>                                  
                                 </div>
                             </section>
                         </div>
