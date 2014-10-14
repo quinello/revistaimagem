@@ -19,6 +19,8 @@
         <!-- Custom styles for this template -->
         <link href="css/my-css.css" rel="stylesheet"/>
 
+        <link href="css/carousel.css" rel="stylesheet" type="text/css"/>
+
 
     </head>
 
@@ -86,18 +88,43 @@
 
                     <p class="lead text-center">Revista Imagem veio falar sobre a revista como um todo para que veio e os seguintes bla bal bal bal bal bal bal bal bal kdkd dkdkdkdkd dkd dkdk dk dkdkdk sdlkfslk fsdkljflks flkjf sldkfj sdlkfj lksdjf slkdjflk sdflkj sdflkj sdkkd lsdkjf.</p>
 
+                    <div class="carousel owl row">
 
+                        <div class="post front" >
+                            front text text text text text text text text
+                            text text text text text text text text text
+                            text text text text text text text text text
+                            text text text text text text text text text
+                            text text text text text text text text text
+                            text text text text text text text text text
+                            text text text text text text text text text
+                            text text text text text text text text text
+                        </div>
+                        <div class="post back">
+                            back back back back back back back back back 
+                            back back back back back back back back back 
+                            back back back back back back back back back 
+                            back back back back back back back back back 
+                            back back back back back back back back back 
+                            back back back back back back back back back 
+                            back back back back back back back back back 
+                            back back back back back back back back back 
+                            back back back back back back back back back 
+                        </div>
+                    </div>
 
                 </header>
 
                 <div class="panel panel-default" >
                     <div class="panel-heading">
-                        <h3 class="panel-title">Reportagens</h3>
+                        <h2 class="panel-title">Reportagens</h2>
                     </div>
                     <div class="panel-body">
-                                                    <div class="chooseLib">
-                                <label class="libs-label" ng-repeat="lib in libs"><input class="libs-input" type="checkbox" ng-model="lib.checked">{{lib.name}}</label>
-                            </div>   
+
+                        <div class="chooseLib">
+                            Segmentos: 
+                            <label class="libs-label" ng-repeat="lib in libs"><input class="libs-input" type="checkbox" ng-model="lib.checked">{{lib.name}}</label>
+                        </div>   
                         <div class="row">
                             <div class="col-sm-6 col-md-4" ng-if="SegmentoMarkIt('Gastronomia')">                        
                                 <div class ="thumbnail">        

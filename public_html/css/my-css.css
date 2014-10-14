@@ -150,7 +150,7 @@ Fonts
 .libs li {background: #B4DFA6; padding: 10px;  margin-bottom: 3px;}
 .libs li span{margin-right: 10px;}
 .libs-input[type="checkbox"] {margin-right: 5px;}
-.libs-label {margin-right: 70px;}
+.libs-label {margin-right: 30px;}
 
 /*---------------------------------------------------------
  Navigation (_scaffolding.scss)
