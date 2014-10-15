@@ -10,7 +10,7 @@
 
         <title>Revista Imagem</title>
 
-        <!--         For improved cross-browser rendering-->
+        <!--For improved cross-browser rendering-->
         <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
 
         <!-- Bootstrap core CSS -->
@@ -19,14 +19,15 @@
         <!-- Custom styles for this template -->
         <link href="css/my-css.css" rel="stylesheet"/>
 
+        <link href="css/flip.css" rel="stylesheet" type="text/css"/>
 
     </head>
 
-    <body ng-app="">
-
+    <body>
 
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
+
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -65,32 +66,55 @@
                     </div>
 
                     <p class="lead text-center">Revista Imagem veio falar sobre a revista como um todo para que veio e os seguintes bla bal bal bal bal bal bal bal bal kdkd dkdkdkdkd dkd dkdk dk dkdkdk sdlkfslk fsdkljflks flkjf sldkfj sdlkfj lksdjf slkdjflk sdflkj sdflkj sdkkd lsdkjf.</p>
-                    
-       
-                    <ul class="libs">
-                            <li ng-repeat="lib in libs" ng-class="{marked: lib.checked}" ng-click="markIt(lib)"  ng-switch on ="lib.checked">
-                                <span ng-bind="lib.name"></span>
-                                <span class="glyphicon glyphicon-ok" ng-switch-when="true"></span>
-                            </li>
-                    </ul>
-                    
-                    <nav class="site-navigation" role="navigation">
-                        <ul class="nav-custom">  
-                            <li ng-repeat="lib in libs" ng-class="{marked: lib.checked}" ng-click="markIt(lib)"  ng-switch on ="lib.checked"><a href="#">{{lib.name}}<span class="glyphicon glyphicon-ok" ng-switch-when="true"></span></a></li>
-                        </ul>
-                    </nav>
-         
+
+                    <div>
+                        <div class="flip-3d">
+                            <figure>
+                                <img src="images/construcao_car.jpg" alt=""/>
+                                <figcaption style="border-color: #14b9d5;">
+                                     <aside><a href="#" class="boxed" title="Construção" style="background: #14b9d5;">Construção</a></aside>
+                                    <h3 class="text-left">Revista Imagem Construção</h3> 
+                                    <small></small>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="flip-3d">
+                            <figure>
+                                <img src="images/gastro_car.jpg" alt=""/>
+                                
+                                <figcaption style="border-color: red;">
+                                    <aside><a href="#" class="boxed" title="Gastronomia" style="background:red;">Gastronomia</a></aside>
+                                    <h3 class="text-left">Revista Imagem Gastronomia</h3> 
+                                    <small>Comemorando a atividade crescente da culinária de nossa cidade, que cada vez mais e melhor atende a clientela com produtos novos ou os antigos sempre com melhor elaboração.
+                                        Imagem Gastronomia tem certeza de que presta um serviço tão importante para a clientela quanto para o próprio setor gastronômico local, dando-lhe condição de ver uma auto-imagem que já lhe permite representar São José como ponto de referência turística importante na culinária regional.</small>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="flip-3d">
+                            <figure>
+                                <img src="images/moda_car.jpg" alt=""/>
+                                <figcaption style="border-color: #ef39be;">
+                                    <aside><a href="#" class="boxed" title="Construção" style="background: #ef39be;">Construção</a></aside>
+                                    <h3 class="text-left">Revista Imagem Moda</h3> 
+                                    <small></small>                                    
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
                 </header>
 
                 <div class="panel panel-default" >
                     <div class="panel-heading">
-                        <h3 class="panel-title">Reportagens</h3>
-                        <div class="well" >
-                            <h5>Selecione os segmentos que você quer ver</h5>                          	
-                        </div>
-
+                        <h2 class="panel-title">Reportagens</h2>
                     </div>
                     <div class="panel-body">
+
+                        <div class="chooseLib">
+                            Segmentos: 
+                            <label class="libs-label" ng-repeat="lib in libs"><input class="libs-input" type="checkbox" ng-model="lib.checked">{{lib.name}}</label>
+                        </div>   
                         <div class="row">
                             <div class="col-sm-6 col-md-4" ng-if="SegmentoMarkIt('Gastronomia')">                        
                                 <div class ="thumbnail">        
@@ -145,6 +169,8 @@
 
 
             <script src="js/mod_showhidedemo.js" type="text/javascript"></script>
+
+        </div>  
     </body>
 </html>
 

@@ -3,10 +3,10 @@ body {
     background-color: #333;
     min-height: 2000px;
     width: auto;
-    padding-top: 70px;
+    padding-top: 40px;
 }
 .container {
-    min-width: 1000px;     
+    min-width: 1300px;     
 }
 
 .jumbotron {
@@ -17,13 +17,27 @@ body {
     width: 100%;
 }
 
-.entry-content {
+.entry-content p {
     word-wrap: break-word;
+    font-family: 'Montserrat', cursive;
+    line-height: 22px;
+    font-size: 12px;
 }
+
+
 
 .foo-chumbo {
     outline: 1px solid #333;
 }
+
+.boxed {
+    color: whitesmoke;
+    padding: 10px;
+    -webkit-box-shadow: 0 0 27px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 27px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 27px rgba(0, 0, 0, 0.4);
+}
+
 /*---------------------------------------------------------
  Custom logo (_scaffolding.scss)
 -------------------------------------------------------- */
