@@ -24,13 +24,13 @@ body {
     font-size: 12px;
 }
 
-
-
 .foo-chumbo {
     outline: 1px solid #333;
 }
 
 .boxed {
+    font-family: 'Ubuntu', cursive;
+    text-transform: uppercase;
     color: whitesmoke;
     padding: 10px;
     -webkit-box-shadow: 0 0 27px rgba(0, 0, 0, 0.4);
@@ -154,7 +154,14 @@ Fonts
     font-family: "Fira Sans";
     font-style: normal;
     font-weight: 400;
-    src: local("Fira Sans"), local("../fonts/FiraSans-Regular"), url("") format("woff");
+    src: local("Fira Sans"), local("../fonts/FiraSans-Regular.woff"), url("") format("woff");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Ubuntu-Bold"), url("../fonts/Ubuntu-Bold.woff") format("woff");
 }
 /*---------------------------------------------------------
  Menu de selecao de segmento via angular
